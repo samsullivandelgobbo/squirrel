@@ -1,0 +1,64 @@
+{
+  "name": "squirrel-cli",
+  "version": "1.0.0",
+  "description": "CLI tool for UofT Acorn course enrollment",
+  "main": "dist/cli.js",
+  "bin": {
+    "squirrel": "./bin/cli.js"
+  },
+  "files": [
+    "dist",
+    "bin"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "start": "node bin/cli.js",
+    "dev": "ts-node src/cli.ts",
+    "watch": "tsc -w",
+    "lint": "eslint src/**/*.ts",
+    "format": "prettier --write src/**/*.ts",
+    "clean": "rimraf dist",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run lint && npm run test",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "dependencies": {
+    "commander": "^11.1.0",
+    "inquirer": "^8.2.6",
+    "playwright": "^1.40.0",
+    "winston": "^3.11.0",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^8.2.10",
+    "@types/node": "^20.10.0",
+    "@typescript-eslint/eslint-plugin": "^6.12.0",
+    "@typescript-eslint/parser": "^6.12.0",
+    "eslint": "^8.54.0",
+    "prettier": "^3.1.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.3.2"
+  },
+  "keywords": [
+    "uoft",
+    "acorn",
+    "cli",
+    "course-enrollment",
+    "automation"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samsullivandelgobbo/squirrel.git"
+  },
+  "bugs": {
+    "url": "https://github.com/samsullivandelgobbo/squirrel/issues"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "homepage": "https://github.com/samsullivandelgobbo/squirrel#readme"
+}

@@ -1,0 +1,16 @@
+// .npmignore
+src/
+tests/
+.github/
+.vscode/
+.editorconfig
+.eslintrc
+.prettierrc
+tsconfig.json
+*.log
+coverage/
+docs/
+dist/
+.env
+.env.local
+.squirrel/
