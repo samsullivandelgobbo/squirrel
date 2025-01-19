@@ -1,6 +1,6 @@
 // src/acorn.ts
 import { chromium, Page, Browser, BrowserContext } from 'playwright';
-import { AcornConfig, CourseEnrollmentConfig, StoredCookie } from '../types';
+import { CourseEnrollmentConfig, StoredCookie } from '../types';
 import { ConfigManager } from '../config';
 import logger from './logger';
 
